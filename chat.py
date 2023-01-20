@@ -12,15 +12,14 @@ def read_file(filename):
 
 # adding name for each sentence
 def add(chat):
-	name = []
+	person = None
 	new_sentence = []
 	for i in chat:
 		if i == 'Allen' or i == 'Tom':
-			name = i
-		if name == i:
+			person = i
 			continue
-		else:
-			new_sentence.append(name + ': ' + i)
+		if person:
+			new_sentence.append(person + ': ' + i)
 	return new_sentence
 
 
